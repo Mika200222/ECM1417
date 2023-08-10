@@ -1,3 +1,4 @@
+Azure VM link:  http://ml-lab-4d78f073-aa49-4f0e-bce2-31e5254052c7.ukwest.cloudapp.azure.com:60031/ECM1417
 Landing Page:
 
 For active sessions, the landing page (index.php) will greet with "Welcome to Pairs". This is followed by a button "Click here to play," linked to pairs.php. The upper right has a user profile: "User Avatar," "User Name," "User Score," and "Log Out Hyper Lynk." Without an active session, the landing page shows a paragraph: "You’re not using a registered session? Register now" with a hyperlink "Register now" leading to registration.php.
