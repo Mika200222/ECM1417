@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: blue;
+    z-index: 9999;
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 0;
+}
+.navbar-brand{
+    font-size:12px !important;
+    font-family: verdana;
+    color: white;
+    font-weight: bold;
+}
+.nav-link{
+    font-family: verdana;
+    font-size: 12px ;
+    color: white;
+    font-weight: bold;
+
+}
+.menu-link:nth-child(1){
+    align-items: left;
+}
+.navbar-toggler-icon{
+    color: #fff;
+}
+#main{
+    position: absolute;
+    top: 5%;
+    bottom: 0;
+    width: 100%;
+    min-height: 100%;
+    height: min-content;
+    background-image: 
+        linear-gradient(to bottom, rgba(0,0, 0, .50), rgba(0,0, 0, .50)), 
+        url(img/arcade-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: verdana;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    padding: 5% 0;
+    transition: all 0.5s;
+}
+.container{
+    
+}
+.avatar-selector{
+    margin: 50px 0;
+}
+.reg-error{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    text-wrap: wrap;
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+    display: none;
+}
+.inuse-error{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    text-wrap: wrap;
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+    display: none;
+}
+.space-error{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    text-wrap: wrap;
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+    display: none;
+}
+.valid-name{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    text-wrap: wrap;
+    color: #05e310;
+    font-weight: bold;
+    font-size: 25px;
+display: none;
+}
+.landing{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#registration{
+    position: relative;
+    padding: 30px 0;  
+    text-align: center;
+    width: 70%;
+    height: 100%;
+}
+#s-avatar{
+    width: 20%;
+}
+#m-avatar{
+    width: 30%;
+}
+#c-avatar{
+    width: 60%;
+}
+#m-avatar, #c-avatar{
+    display: none;
+}
+#m-avatar, #c-avatar, #s-avatar{
+    background-color: rgba(7, 25, 226, 0.8);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    margin: auto;
+    
+}
+#m-avatar img{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+#m-avatar img:hover{
+    border: 2px solid red;
+}
+.avatar-selected{
+    border: 2px solid red;
+}
+.av-img img{
+    width:100px;
+    cursor: pointer;
+}
+input[type=submit]{
+    background-color:rgba(7, 25, 226, 0.9);
+    color: #fff;
+    font-size: 1.3em;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* User profile  */
+
+#user-prof{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color:rgba(7, 25, 226, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+    padding: 15px;
+}
+
+/* Leaderboard page  */
+#leaderboard{
+    margin-top: 10%;
+    position: relative;
+    background-color: grey;
+    opacity: 0.9;
+    width: 80%;
+    min-height: 50%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px black,
+                -5px -5px 10px black ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+#scores{
+    text-align: center;
+}
+#scores th, #scores td{
+    border: 2px solid black;
+    padding: 15px;
+}
+#scores thead{
+    background-color: blue;
+}
+
+
+/* Game css codes  */
+ #start-g{
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    background-color: blue;
+    color:#fff;
+}
+#game{
+    display: none;
+}
+/*
+#game{
+    
+    width: 80%;
+    min-height: 95%;
+    background-color: grey;
+    box-shadow: 5px 5px 10px grey, -5px -5px 10px grey, 5px -5px 10px grey, -5px 5px 10px grey;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+.cards {
+   
+    width: 70%;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    
+}
+
+.card{   
+    width: 15rem;
+    height: 19rem;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    cursor: pointer;
+}
+.card:hover{
+    transition: all 0.5s;
+    box-shadow: 5px 5px 10px black, -5px -5px 10px black, 5px -5px 10px black, -5px 5px 10px black;
+    
+}
+.card:not(:hover){
+    transition: all 0.5s;
+}
+.card.flip{
+    transform: rotateY(180deg);
+}
+.card-front , .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.card-front{
+    background-color: #333;
+    color: #fff;
+}
+.card-back{
+   background-color: #517fa4; 
+   color: #fff;
+   transform: rotateY( 180deg );
+}
+.card img{
+    width: 50%;
+}
+.card-front span:nth-child(1){
+   
+    position: absolute;
+    top: 3%;
+    left: 5%;
+}
+.card-front span:nth-child(2){
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
+    transform: rotate(180deg);
+     
+} */
+@media (max-width: 768px){
+    #user-prof{
+        width: 70%;
+    } 
+    #s-avatar, #m-avatar, #c-avatar{
+        width: 90%;
+    }
+    /* #game{
+        height: 90%;
+        width: 90%;
+    }
+    .cards{
+        width: 100%;
+    }
+    .card{
+        width: 10rem;
+        height: 15rem;
+    } */
+}
+@media (min-width: 768px){
+
+}

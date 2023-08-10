@@ -1,0 +1,31 @@
+Landing Page:
+
+For active sessions, the landing page (index.php) will greet with "Welcome to Pairs". This is followed by a button "Click here to play," linked to pairs.php. The upper right has a user profile: "User Avatar," "User Name," "User Score," and "Log Out Hyper Lynk." Without an active session, the landing page shows a paragraph: "You’re not using a registered session? Register now" with a hyperlink "Register now" leading to registration.php.
+
+Registration Page:
+
+Registration.php establishes session variables, cookies for user profiles. User details are stored in cookies. The form includes:
+Username/nickname:
+
+Input with prohibited characters gets an error. Unused usernames show: "You can use this username." Taken usernames show an error, followed by: "Entered username is in use." Restricted characters: " ! @ # % & * ( ) + = ˆ { } [ ] — ; : “ ’ < > ? /". 
+Avatar selection has 3 levels:
+a. Simple - Default image for all users.
+b. Medium - Pick an image from collection.
+c. Complex - Customize an emoji avatar/image by configuring features.
+
+Pairs Game:
+
+'Pairs' is a memory-based game. Players select card pairs on a table. Pairs.php offers a virtual version, playable in a browser.
+The webpage has a div with grey background, 5px box-shadow, for playing. Game starts with "Start the game" button. Button vanishes when game starts. In 'Simple' mode:
+
+6 'cards' display (3 pairs) with preset images.
+Flip 2 cards at a time. Matching cards stay up.
+Score is attempts to match all cards.
+Game records, counts round duration.
+For registered users, after game: "Submit" and "Play again" buttons appear.
+Submit stores points in cookies, navigates to leaderboard.php.
+No medium, complex game levels.
+
+Leader board page:
+
+Displayes the best scores.
